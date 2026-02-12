@@ -1,0 +1,455 @@
+/* Globální styly a reset z původního kódu */
+:root {
+    --primary-color: #333;
+    --secondary-color: #555;
+    --background-color: #f4f4f4;
+    --white-color: #fff;
+    --accent-color: #007bff; /* Použijte pro tlačítka/zvýraznění */
+    --max-width: 1100px;
+}
+.logo{
+    max-width: 200px;
+    max-height: 200px;
+}
+/* --- Sekce Kontakt (Přidáno pro konzistenci designu) --- */
+.contact {
+    /* Použijte background-color pro vizuální oddělení */
+    background: var(--background-color); 
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    /* Převzato z h2 sekcí */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contact p {
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+/* Tlačítka (Buttons) */
+.btn {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: 10px;
+    border: none; /* Zajistí, že tlačítko nemá nechtěný rámeček */
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.contact-btn {
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.contact ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.contact ul li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.contact ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Patička (Footer) --- */
+footer {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer .container {
+    /* Centrování obsahu patičky, pokud má omezenou šířku */
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 20px;
+}
+.dolninav ul{
+    text-align: center;
+    justify-content: center;
+}
+
+
+.dolninav ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 400;
+    padding: 0 15px;
+    transition: color 0.3s;
+    text-align: center;
+    
+}
+
+/* --- Responzivní úpravy pro Kontakt/Patičku --- */
+@media (max-width: 768px) {
+    .contact {
+        padding: 40px 0;
+    }
+}
+* {
+    
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+/* Kontejner upraven na .container1 pro hlavičku dle vašeho HTML */
+.container1 {
+    max-width: var(--max-width);
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+    
+    /* Flexbox pro hlavičku */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- Hlavička a Navigace --- */
+header {
+    background: var(--white-color);
+    color: var(--primary-color);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--background-color);
+    position: sticky; /* Zajišťuje, že navigace zůstane nahoře při scrollování */
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 400;
+    padding: 0 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Styly pro galerii --- */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 40px 0 20px 0;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.gallery {
+    /* Používáme CSS Grid pro efektivní a responzivní galerii */
+    max-width: var(--max-width);
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 250px je minimální šířka */
+    gap: 15px;
+}
+
+.thumb {
+    display: block;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--white-color);
+}
+
+.thumb:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.item {
+    width: 100%;
+    /* Poměr stran 4:3 pro náhledy */
+    aspect-ratio: 4 / 3; 
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zajišťuje, že obrázek pokryje celou plochu bez deformace */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.thumb:hover img {
+    transform: scale(1.05);
+}
+
+/* --- Lightbox pro zobrazení velkého obrázku --- */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 2000;
+}
+
+.lightbox:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Cursor: Nastaven na zvětšení, ale kliknutí ve skutečnosti zavře, protože <a> vede ven z lightboxu */
+    cursor: zoom-out; 
+}
+
+.lightbox img {
+    
+    object-fit: contain; /* Zajišťuje, že se velký obrázek vejde na obrazovku */
+    display: block;
+    max-width: 90%; /* Maximální šířka */
+    max-height: 90vh; /* Maximální výška (vh = viewport height) */
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Vycentrování obrázku */
+    transform: translate(-50%, -50%); 
+    /* Čistý vzhled */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    border: 4px solid var(--white-color);
+}
+
+/* --- Responzivní design (Media Queries) --- */
+@media (max-width: 768px) {
+    /* Hlavička */
+    header .container1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        justify-content: center;
+    }
+    
+    nav ul li a {
+        padding: 5px 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin: 30px 0 15px 0;
+    }
+    
+    /* Galerie - menší mezery */
+    .gallery {
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Menší zařízení */
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    nav ul li a {
+        padding: 5px;
+        display: block;
+    }
+    
+    /* Galerie - náhledy mohou být větší, pokud se nevejdou 2 */
+    .gallery {
+         grid-template-columns: 1fr; /* Jeden sloupec */
+    }
+
+
+
+
+
+    /*doplnek pro web*/
+    /* --- Nový kontejner pro obsah --- */
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* --- Sekce Projektu --- */
+.project-detail {
+    padding: 60px 0;
+    text-align: center;
+    background: var(--white-color); /* Použijte bílé pozadí pro odlišení od background-color */
+}
+
+/* Hlavičky a popisek - převzato z původního stylu */
+.project-detail h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.project-detail .section-description {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Rozvržení jednotlivých prvků projektu (obrázek + text) */
+.project-feature {
+    display: flex;
+    align-items: center; /* Zarovná vertikálně na střed */
+    gap: 40px;
+    margin-bottom: 80px;
+    text-align: left; /* Text uvnitř bloku bude zarovnán vlevo */
+}
+
+/* Reverzní pořadí pro střídání rozložení (obrázek vpravo) */
+.project-feature.reverse {
+    flex-direction: row-reverse;
+}
+
+.screenshot-wrapper {
+    flex: 1; /* Zabere polovinu šířky */
+    min-width: 300px; /* Minimální šířka, aby se obrázek příliš nezmenšil */
+    padding: 20px;
+    background: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.screenshot {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.description-block {
+    flex: 1; /* Zabere polovinu šířky */
+    padding: 10px 0;
+}
+
+.description-block h3 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.description-block p {
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.description-block ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: var(--secondary-color);
+}
+
+.description-block ul li {
+    margin-bottom: 5px;
+}
+
+/* Aktivní odkaz v navigaci */
+nav ul li a.active {
+    color: var(--accent-color);
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+
+/* --- Responzivní úpravy pro projekt --- */
+@media (max-width: 900px) {
+    /* Změna na vertikální rozložení na menších obrazovkách */
+    .project-feature,
+    .project-feature.reverse {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 60px;
+    }
+
+    .screenshot-wrapper {
+        min-width: 100%;
+        padding: 15px;
+    }
+    
+    .description-block {
+        text-align: center;
+    }
+
+    .description-block ul {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        text-align: left;
+    }
+}
+
+}

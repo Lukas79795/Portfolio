@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt: Název Vaší Webové Stránky</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+
+<body>
+    <header>
+        <div class="container1">
+            <h1><img src="logotrans.png" alt=""class="logo"></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">O mně</a></li>
+                    <li><a href="fotografie.html">Fotogalerie</a></li>
+                    <li><a href="vektor.html">Vektorová grafika</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="project-detail">
+            <h2>Webové stránky pro hotel</h2>
+            <p class="section-description">
+                Tento projekt spočíval ve vytvoření kompletní responzivní webové stránky pro fiktivní hotel u lesa. Webová stránka byla součástí mého maturitního projektu.
+            </p>
+
+            <div class="project-feature">
+                <div class="screenshot-wrapper">
+                    <img src="hotel/hoteluvod.png" alt="Úvodní obrazovka webu" class="screenshot">
+                </div>
+                <div class="description-block">
+                    <h3>MVC architektura</h3>
+                    <p>
+                      Základem tohoto hotelového projektu je využití architektury Model-View-Controller (MVC). Tato struktura zajišťuje,
+                       že kód je přehledný, škálovatelný a snadno udržovatelný. Model spravuje data (komunikuje s databází phpMyAdmin, 
+                       kde je uložen veškerý obsah), View prezentuje data uživateli (vizuální rozhraní tvořené HTML, CSS a JavaScriptem),
+                        a Controller funguje jako mozek, který zpracovává požadavky a řídí tok dat mezi Modelem a View. Toto oddělení starostí 
+                        (Separation of Concerns) umožňuje budoucí rychlé a efektivní přidávání nových funkcí a aktualizací bez narušení stávajícího systému.
+                    </p>
+                    
+                </div>
+            </div>
+
+            <div class="project-feature reverse">
+                <div class="screenshot-wrapper">
+                    <img src="hotel/resp.png" alt="Responzivní zobrazení webu" class="screenshot">
+                </div>
+                <div class="description-block">
+                    <h3> Responzivní Design </h3>
+                    <p>
+                        Plně responzivní design zajišťuje dokonalý uživatelskéhý zážitku na jakémkoliv zařízení. Web
+                        je optimalizovaný pro desktop,
+                        tablet i mobilní telefony, což je klíčové pro hosty hledající ubytování na cestách.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="project-feature">
+                <div class="screenshot-wrapper">
+                    <img src="hotel/edit.png" alt="Detailní pohled na sekci Služby" class="screenshot">
+                </div>
+                <div class="description-block">
+                    <h3>Dynamický obsah</h3>
+                    <p>
+                        Správa Obsahu v reálném čase (CMS): Veškerý dynamický obsah stránky od popisů pokojů a služeb,
+                        přes aktuální ceníky, až po kontaktní údaje je uložen v databázi phpMyAdmin.
+                    </p>
+                    <p>Pro hotelové zaměstnance byla vytvořena speciální administrátorská sekce, kde se po přihlášení s
+                        příslušnou rolí mohou sami jednoduše ujmout editace a aktualizace obsahu.
+                        To umožňuje týmu hotelu okamžitě reagovat na změny, spouštět akce a udržovat web stále aktuální
+                        bez nutnosti zásahu externího vývojáře.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="project-feature reverse">
+                <div class="screenshot-wrapper">
+                    <img src="hotel/rezervace.png" alt="Responzivní zobrazení webu" class="screenshot">
+                </div>
+                <div class="description-block">
+                    <h3>Rezervační systém</h3>
+                    <p>
+                       Součástí webu je integrovaný, plně funkční rezervační systém. Hosté mají možnost si přímo na stránce zarezervovat pokoj 
+                       výběrem data příjezdu a odjezdu. Po odeslání požadavku systém automaticky provede rychlou kontrolu v databázi (phpMyAdmin)
+                        dostupnosti. Zkontroluje, zda není vybraný pokoj již obsazen jinou rezervací v daném termínu. Pokud je pokoj volný, rezervace 
+                        je potvrzena a termín je ihned zablokován v databázi, čímž se efektivně předchází dvojitým rezervacím. Tato automatizace
+                         zjednodušuje práci zaměstnanců a zajišťuje hostům okamžitou odezvu na jejich poptávku.
+                    </p>
+
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <p>Máte zájem o spolupráci? Neváhejte se mi ozvat!</p>
+            <a href="mailto:richter.luky@gmail.com" class="btn contact-btn">Odeslat E-mail</a>
+            <p>Nebo mě najdete na:</p>
+            <ul>
+                <li><a href="https://www.instagram.com/lukas___richter/#" target="_blank">Instagram</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100012104806361" target="_blank">Facebook</a></li>
+            </ul>
+        </div>
+    </section>
+    
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Richter Lukáš. Všechna práva vyhrazena.</p>
+        </div>
+        <div class="container">
+            
+            <nav class="dolninav">
+                <ul> 
+                    <li><a href="fotografie.html">Fotogalerie</a></li>
+                    <li><a href="vektor.html">Vektorová grafika</a></li>
+                    <li><a href="web.html">Web</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
