@@ -233,9 +233,15 @@ footer {
     
 }
 
-/* Responzivní design (Media Queries) */
+/* Responzivní design */
 @media (max-width: 768px) {
     /* Hlavička */
+    header{
+        position: relative;
+    }
+    body {
+        padding-top: 0;
+    }
     header .container {
         flex-direction: column;
         text-align: center;

@@ -112,6 +112,7 @@ footer .container {
     .contact {
         padding: 40px 0;
     }
+   
 }
 * {
     
@@ -277,6 +278,12 @@ h1 {
 /* --- Responzivní design (Media Queries) --- */
 @media (max-width: 768px) {
     /* Hlavička */
+    header{
+        position: relative;
+    }
+    body {
+        padding-top: 0;
+    }
     header .container1 {
         flex-direction: column;
         text-align: center;
